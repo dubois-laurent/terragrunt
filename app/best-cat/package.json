@@ -1,0 +1,20 @@
+{
+  "name": "best-cat",
+  "version": "1.0.0",
+  "description": "Vote for the best cat",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "package": "powershell -Command \"New-Item -ItemType Directory -Force -Path ..\\..\\dist | Out-Null; $files = Get-ChildItem -Recurse -Force | Where-Object { $_.FullName -notmatch '\\\\.git' -and $_.FullName -notmatch 'node_modules[\\\\/]\\.cache' }; Compress-Archive -Force -Path (($files | Where-Object { -not $_.PSIsContainer }) | Select-Object -ExpandProperty FullName) -DestinationPath ..\\..\\dist\\best-cat.zip\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.993.0",
+    "@aws-sdk/client-dynamodb": "^3.993.0",
+    "@aws-sdk/lib-dynamodb": "^3.993.0",
+    "@aws-sdk/s3-request-presigner": "^3.993.0",
+    "handlebars": "^4.7.9"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

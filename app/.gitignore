@@ -1,0 +1,45 @@
+# Terragrunt files
+.terragrunt-cache/
+terragrunt.hcl.json
+
+# Terraform files
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+!example.tfvars
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build and cache
+*.out
+*.egg-info/
+dist/
+build/
+
+# Node.js / JavaScript
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-error.log
+.env
+.env.local
+package-lock.json
