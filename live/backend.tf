@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket       = "terragrunt-to-terralith-tfstate-2025-09-24-2359"
+    bucket       = "terragrunt-laurent"
     key          = "tofu.tfstate"
-    region       = "us-east-1"
+    region       = "eu-west-1"
     encrypt      = true
     use_lockfile = true
   }

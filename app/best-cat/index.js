@@ -27,7 +27,7 @@ const __dirname = dirname(__filename);
 
 // Load static files
 const templateHtml = readFileSync(join(__dirname, 'template.html'), 'utf8');
-const stylesCss = readFileSync(join(__dirname, 'styles.css'), 'utf8');
+const stylesCss = readFileSync(join(__dirname, 'style.css'), 'utf8');
 const scriptJs = readFileSync(join(__dirname, 'script.js'), 'utf8');
 
 // Compile Handlebars template

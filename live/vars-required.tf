@@ -1,6 +1,7 @@
 variable "name" {
   description = "Name used for all resources"
   type        = string
+  default     = "laurent"
 }
 
 variable "lambda_zip_file" {
